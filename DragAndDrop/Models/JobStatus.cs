@@ -1,8 +1,8 @@
-﻿namespace DragAndDrop
+﻿namespace DragAndDrop.Models
 {
     public enum JobStatus
     {
-        Started = 1,
+        ToDo = 1,
         OnGoing = 2,
         OnHold = 3,
         Completed = 4,

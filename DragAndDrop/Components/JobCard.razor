@@ -1,0 +1,19 @@
+﻿<li class="job-card draggable" title="@Job.Title" @ondragstart="@(() => HandleDragStart(Job))">
+    <h6 class="job-card__title">@Job.Title</h6>
+    <p class="job-cart__description">@Job.Description</p>
+    <p class="job-card__time">@Job.LastUpdated.ToShortTimeString()</p>
+</li>
+
+
+@code{
+    [CascadingParameter]
+    public JobsContainer Container { get; set; }
+
+    [Parameter]
+    public Job Job { get; set; }
+
+    private void HandleDragStart(Job job)
+    {
+        Container.Job = job;
+    }
+}
