@@ -24,7 +24,6 @@ namespace DragAndDrop.Components
 
         protected override void OnParametersSet()
         {
-            base.OnParametersSet();
 
             _jobs.Clear();
 

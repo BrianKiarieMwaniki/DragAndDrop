@@ -1,0 +1,52 @@
+﻿.jobs {
+    &-container {
+        height: 100vh;
+        background-color: var(--light-gray);
+        background-image: var(--kanban-bg-image);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        column-gap: .75rem;
+        padding: 0 .75rem;
+        overflow-y: hidden;
+    }
+
+    &-column {
+        flex: 1;
+        backdrop-filter: blur(0.5rem);
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0 .25rem;
+        display: flex;
+        flex-direction: column;
+
+        & h4{
+            background-color: #b6b6b6;
+            color: #000;
+            border-style: 4px;
+            text-align: center;
+            padding: .5rem 0;
+
+            & small{
+                font-size: 1.2rem;
+            }
+        }
+
+        & ul {
+            flex: 1;
+            list-style: none;
+            padding: 0 .25rem;
+        }
+
+        & .no-drop {
+            border: 2px dashed red;
+        }
+
+        & .allow-drop {
+            border: 2px groove #0ef628;
+            border-radius: 4px;
+        }
+    }
+}

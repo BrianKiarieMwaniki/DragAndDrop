@@ -1,7 +1,7 @@
-﻿<li class="job-card draggable" title="@Job.Title" @ondragstart="@(() => HandleDragStart(Job))">
+﻿<li class="job-card draggable" draggable="true" title="@Job.Title" @ondragstart="@(() => HandleDragStart(Job))">
     <h6 class="job-card__title">@Job.Title</h6>
     <p class="job-cart__description">@Job.Description</p>
-    <p class="job-card__time">@Job.LastUpdated.ToShortTimeString()</p>
+    <p class="job-card__time">@Job.LastUpdated.ToString("HH:mm.ss tt")</p>
 </li>
 
 

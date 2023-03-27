@@ -1,12 +1,12 @@
-﻿<div class="jobs-column">
-    <h4>@ColumnStatus (@_jobs.Count)</h4>
-
-    <ul class="dropzone @_dropClass"
-        ondragover="event.preventDefault"
-        ondragstart="event.dataTransfer.setDate('', event.target.id);"
-        @ondrop="HandleDrop"
+﻿<div class="jobs-column" dropzone="move" 
+     ondragover="event.preventDefault();"
+     @ondrop="HandleDrop"
         @ondragenter="HandleDragEnter"
         @ondragleave="HandleDragLeave">
+
+    <h4>@ColumnStatus :<small>@_jobs.Count</small></h4>
+
+    <ul class="dropzone @_dropClass">
         @foreach (var job in _jobs)
         {
             <JobCard Job="job"/>

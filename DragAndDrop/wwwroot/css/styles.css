@@ -1,0 +1,79 @@
+﻿:root {
+  --base-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --light-gray: #d3d3d3;
+  --kanban-bg-image: url(../../assets/images/kanban-bg.jpg);
+  --job-card-bgcolor: #fff; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-family: var(--base-font);
+  font-weight: 400;
+  font-size: 1.5rem;
+  overflow-y: auto;
+  position: relative; }
+
+.jobs-container {
+  height: 100vh;
+  background-color: var(--light-gray);
+  background-image: var(--kanban-bg-image);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  column-gap: .75rem;
+  padding: 0 .75rem;
+  overflow-y: hidden; }
+
+.jobs-column {
+  flex: 1;
+  backdrop-filter: blur(0.5rem);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 .25rem;
+  display: flex;
+  flex-direction: column; }
+  .jobs-column h4 {
+    background-color: #b6b6b6;
+    color: #000;
+    border-style: 4px;
+    text-align: center;
+    padding: .5rem 0; }
+    .jobs-column h4 small {
+      font-size: 1.2rem; }
+  .jobs-column ul {
+    flex: 1;
+    list-style: none;
+    padding: 0 .25rem; }
+  .jobs-column .no-drop {
+    border: 2px dashed red; }
+  .jobs-column .allow-drop {
+    border: 2px groove #0ef628;
+    border-radius: 4px; }
+
+.job-card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: var(--job-card-bgcolor);
+  color: #000;
+  padding: 1rem .5rem;
+  cursor: pointer;
+  border-radius: 4px; }
+  .job-card:not(first-child) {
+    margin-bottom: .25rem; }

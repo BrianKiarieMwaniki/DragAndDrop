@@ -1,0 +1,35 @@
+﻿:root {
+    --base-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    --light-gray: #d3d3d3;
+    --kanban-bg-image:url(../../assets/images/kanban-bg.jpg);
+    --job-card-bgcolor:#fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    font-family: var(--base-font);
+    font-weight: 400;
+    font-size: 1.5rem;
+    overflow-y: auto;
+    position: relative;
+}
