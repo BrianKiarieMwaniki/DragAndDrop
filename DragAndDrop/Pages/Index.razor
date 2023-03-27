@@ -3,6 +3,6 @@
 <JobsContainer Jobs="_jobs" OnJobUpdated="HandleJopUpdated">
     @foreach (JobStatus status in Enum.GetValues(typeof(JobStatus)))
     {
-        <JobsColumn ColumnStatus="status" AllowStatuses="new JobStatus[] { status}"/>
+        <JobsColumn ColumnStatus="status" AllowStatuses="GetJobStatuses(status)"/>
     }
 </JobsContainer>
